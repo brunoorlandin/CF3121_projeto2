@@ -11,7 +11,7 @@ def doisPolarizadores ():
     print("Escolha qual sera a intensidade")
     print("[1] I0")
     print("[2] I1")
-    print("[3] I0")
+    print("[3] I2")
     op = int(input("Esolha: "))
 
     if op == 1:
@@ -28,8 +28,8 @@ def doisPolarizadores ():
       break
     elif op == 3:
       I2 = float(input("Digite o valor de I2 em w/m2: "))
-      I0 = I1 * 2
       I1 = I2 / (math.pow(math.cos(tetaRad),2))
+      I0 = I1 * 2
       os.system('cls' if os.name == 'nt' else 'clear')
       break
     else:
@@ -79,6 +79,7 @@ def main ():
       elif op == 2:
         doisPolarizadores()
       elif op == 0:
+        os.system('cls' if os.name == 'nt' else 'clear')
         break
       else:
         os.system('cls' if os.name == 'nt' else 'clear')
